@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+
+<script src="ex4-destructuring-assignment-2.js"></script>
+<script>
+    let color = ['red', 'green', 'blue']
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    myObjects.map((rect, index) => {
+        // Red rectangle
+        ctx.beginPath();
+        ctx.strokeStyle = color[index];
+        ctx.rect(rect.x, rect.y, rect.width, rect.height);
+        ctx.stroke();
+    })
+</script>
+</body>
+</html>
