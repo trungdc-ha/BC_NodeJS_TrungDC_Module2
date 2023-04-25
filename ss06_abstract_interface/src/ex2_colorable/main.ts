@@ -3,7 +3,6 @@ import {Rectangle} from "./Rectangle";
 import {Square} from "./Square";
 import {Shape} from "./Shape";
 import {Cylinder} from "./Cylinder";
-import {Colorable} from "./Colorable";
 
 
 let circle: Circle = new Circle("circle", 2);
@@ -14,7 +13,8 @@ let square: Square = new Square("Square", 4);
 let shape: Shape[] = [circle, cylinder, rectangle, square];
 
 shape.forEach((value) => {
-    if ('Colorable' !== typeof value) {
-        return;
+    if (value instanceof Square) {
+        console.log(value)
+        value.howToColor()
     }
 })
